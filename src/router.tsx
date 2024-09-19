@@ -2,7 +2,8 @@ import {
   createBrowserRouter,
 } from "react-router-dom";
 
-import { Dashboard } from './App.tsx'
+import { Dashboard } from './Dashboard'
+import { NotFound } from "./NotFound";
 
 export default createBrowserRouter([
   {
@@ -12,5 +13,9 @@ export default createBrowserRouter([
   {
     path: "/aaa",
     element: <Dashboard />,
+  },
+  {
+    path: "*",
+    element: <NotFound />,
   },
 ]);
